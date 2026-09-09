@@ -1,0 +1,402 @@
+[
+    {
+        "input": "Create a complete XML behavior tree. Proceed to the cooling_tower_1 (x=-3.34, y=-3.87, yaw=2.82). Retry up to 3 times on failure. Use <RetryUntilSuccessful> with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"cooling_tower_1\" value=\"-3.34;-3.87;2.82\"/>\n      <RetryUntilSuccessful num_attempts=\"3\">\n        <NavToPose goal=\"{cooling_tower_1}\" />\n      </RetryUntilSuccessful>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Generate a complete XML behavior tree. Displace to the cargo_lift_2 (14.88; 0.87; 2.96).",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"cargo_lift_2\" value=\"14.88;0.87;2.96\"/>\n      <NavToPose goal=\"{cargo_lift_2}\" />\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Output a full XML behavior tree. Proceed to the meter_room_1 (8.19; 14.56; 2.23).",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"meter_room_1\" value=\"8.19;14.56;2.23\"/>\n      <NavToPose goal=\"{meter_room_1}\" />\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Generate an XML behavior tree. Head to the calibration_lab_1 (x=7.62, y=-8.23, yaw=1.11). Retry up to 3 times on failure. Use <RetryUntilSuccessful> with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"calibration_lab_1\" value=\"7.62;-8.23;1.11\"/>\n      <RetryUntilSuccessful num_attempts=\"3\">\n        <NavToPose goal=\"{calibration_lab_1}\" />\n      </RetryUntilSuccessful>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Create an XML behavior tree. Proceed to the elevator_lobby_1 (14.92; -10.85; -0.04).",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"elevator_lobby_1\" value=\"14.92;-10.85;0.04\"/>\n      <NavToPose goal=\"{elevator_lobby_1}\" />\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Generate an XML behavior tree. Transit to the power_substation_1 (3.82, 8.76, -0.49).",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"power_substation_1\" value=\"3.82;8.76;-0.49\"/>\n      <NavToPose goal=\"{power_substation_1}\" />\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Generate a complete XML behavior tree. Head to the calibration target (x=0.0, y=0.0, yaw=0.0). Retry up to 5 times if it fails. Use '<RetryUntilSuccessful>' with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"calibration_target\" value=\"0.0;0.0;0.0\"/>\n      <RetryUntilSuccessful max_attempts=\"5\">\n        <NavToPose goal=\"{calibration_target}\" />\n      </RetryUntilSuccessful>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Output a full XML behavior tree. Drive to the reservoir_1 (x=-14.25, y=-6.75, yaw=-1.74).",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"reservoir_1\" value=\"-14.25;-6.75;-1.74\"/>\n      <NavToPose goal=\"{reservoir_1}\" />\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Output a behavior tree in XML. Proceed to the welding_booth_1 (x=-10.1, y=-3.62, yaw=3.07).",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"welding_booth_1\" value=\"-10.1;-3.62;3.07\"/>\n      <NavToPose goal=\"{welding_booth_1}\" />\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Output a full XML behavior tree. Route to the conveyor_junction_2 (coords: -11.5, -13.64, -2.91). Retry up to 5 times on failure. Use <RetryUntilSuccessful> with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"conveyor_junction_2\" value=\"-11.5;-13.64;-2.91\"/>\n      <RetryUntilSuccessful num_attempts=\"5\">\n        <NavToPose goal=\"{conveyor_junction_2}\" />\n      </RetryUntilSuccessful>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Draft an executable XML behavior tree. Trek to the brazing_station_3 (-3.06; -9.31; -2.37). Retry up to 2 times on failure. Use <RetryUntilSuccessful> with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"brazing_station_3\" value=\"-3.06;-9.31;0.0\"/>\n      <RetryUntilSuccessful max_attempts=\"2\">\n        <NavToPose goal=\"{brazing_station_3}\" />\n      </RetryUntilSuccessful>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Create an XML behavior tree. Go to the transfer_point_1 (-12.1; 10.42; 0.65).",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"transfer_point_1\" value=\"-12.1;-12.1;0.65\"/>\n      <NavToPose goal=\"{transfer_point_1}\" />\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Output a complete XML behavior tree. Trek to the crimping_tool_2 (coords: 8.72, -14.58, 0.23). Retry up to 2 times on failure. Use <RetryUntilSuccessful> with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"crimping_tool_2\" value=\"8.72; -14.58; 0.23\"/>\n      <RetryUntilSuccessful num_attempts=\"2\">\n        <NavToPose goal=\"{crimping_tool_2}\" />\n      </RetryUntilSuccessful>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Draft a full XML behavior tree. Steer to the actuator_bank_1 (10.29, 8.28, -1.7).",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"actuator_bank_1\" value=\"10.29;8.28;-1.7\"/>\n      <NavToPose goal=\"{actuator_bank_1}\" />\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Draft a full XML behavior tree. Drive to the actuator_bank_2 (x=5.45, y=1.11, yaw=-1.46).",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"actuator_bank_2\" value=\"5.45;1.11;-1.46\"/>\n      <NavToPose goal=\"{actuator_bank_2}\" />\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Generate an XML behavior tree. Cruise to the weighbridge_1 at (1.17, 7.41, -0.45).",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"weighbridge_1\" value=\"1.17;7.41;-0.45\"/>\n      <NavToPose goal=\"{weighbridge_1}\" />\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Create a complete XML behavior tree. Motor to the quality_control_1 (x=6.97, y=-12.3, yaw=-1.29). Retry up to 4 times on failure. Use <RetryUntilSuccessful> with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"quality_control_1\" value=\"6.97;-12.3;-1.29\"/>\n      <RetryUntilSuccessful num_attempts=\"4\">\n        <NavToPose goal=\"{quality_control_1}\" />\n      </RetryUntilSuccessful>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Output a complete XML behavior tree. Trek to the robot_cell_3 (-1.7, 13.52, 2.23). Retry up to 3 times on failure. Use <RetryUntilSuccessful> with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"robot_cell_3\" value=\"-1.7;13.52;2.23\"/>\n      <RetryUntilSuccessful num_attempts=\"3\">\n        <NavToPose goal=\"{robot_cell_3}\" />\n      </RetryUntilSuccessful>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Create an XML behavior tree. Displace to the cistern_1 (11.56, -4.15, -1.93).",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"cistern_1\" value=\"11.56;-4.15;-1.93\"/>\n      <NavToPose goal=\"{cistern_1}\" />\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Generate a behavior tree in XML. Journey to the eye_wash_3 at (8.6, 11.29, -0.84). Retry up to 3 times on failure. Use <RetryUntilSuccessful> with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"eye_wash_3\" value=\"8.6;11.29;-0.84\"/>\n      <RetryUntilSuccessful num_attempts=\"3\">\n        <NavToPose goal=\"{eye_wash_3}\" />\n      </RetryUntilSuccessful>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Create a complete XML behavior tree. Displace to the cnc_mill_1 at (-14.2, -9.03, 0.94).",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"cnc_mill_1\" value=\"-14.2;-9.03;0.94\"/>\n      <NavToPose goal=\"{cnc_mill_1}\" />\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Create an executable XML behavior tree. Make your way to the tote_return_1 at (1.09, 14.19, -0.76).",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"tote_return_1\" value=\"1.09;14.19;-0.76\"/>\n      <NavToPose goal=\"{tote_return_1}\" />\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Create a full XML behavior tree. Make your way to the observation_deck_1 (2.68; 9.28; -3.1).",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"observation_deck_1\" value=\"2.68;9.28;-3.1\"/>\n      <NavToPose goal=\"{observation_deck_1}\" />\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Draft a full XML behavior tree. Advance to the access_hatch_1 (x=-13.01, y=12.39, yaw=0.42).",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"access_hatch_1\" value=\"-13.01;12.39;0.42\" />\n      <NavToPose goal=\"{access_hatch_1}\" />\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Draft an XML behavior tree. Journey to the transfer_point_4 (-13.48; -4.99; 3.07). Retry up to 2 times on failure. Use <RetryUntilSuccessful> with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"transfer_point_4\" value=\"-13.48;-4.99;3.07\"/>\n      <RetryUntilSuccessful num_attempts=\"2\">\n        <NavToPose goal=\"{transfer_point_4}\" />\n      </RetryUntilSuccessful>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Draft an executable XML behavior tree. Displace to the maintenance_zone_1 (12.46; -8.36; -2.74). Retry up to 4 times on failure. Use <RetryUntilSuccessful> with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"maintenance_zone_1\" value=\"12.46;-8.36;-2.74\"/>\n      <RetryUntilSuccessful num_attempts=\"4\">\n        <NavToPose goal=\"{maintenance_zone_1}\" />\n      </RetryUntilSuccessful>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Output a full XML behavior tree. Advance to the safety_shower_2 (14.02; -6.15; 2.33). Retry up to 5 times on failure. Use <RetryUntilSuccessful> with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"safety_shower_2\" value=\"14.02; -6.15; 2.33\"/>\n      <RetryUntilSuccessful num_attempts=\"5\">\n        <NavToPose goal=\"{safety_shower_2}\" />\n      </RetryUntilSuccessful>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Create a full XML behavior tree. Advance to the gauge_cluster_1 (x=6.05, y=5.51, yaw=-2.69).",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"gauge_cluster_1\" value=\"6.05;5.51;-2.69\"/>\n      <NavToPose goal=\"{gauge_cluster_1}\" />\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Create an executable XML behavior tree. Command: drive to 'customer_location_1' (3.14, -1.2, 0.5). If unreachable, navigate to 'customer_location_2' (3.5, -1.0, 0.5). Use a '<Fallback>' sequence for 'NavToPose' attempts.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <NavToPose goal=\"{customer_location_1}\" />\n      <Fallback>\n        <Sequence>\n          <SetBlackboard output_key=\"customer_location_1\" value=\"3.14;-1.2;0.5\" />\n          <NavToPose goal=\"{customer_location_1}\" />\n        </Sequence>\n      </Fallback>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Output a full XML behavior tree. Pilot to waypoint at coordinates (-7.57, -1.87, -0.38). If unreachable, pilot to water cooler at (0.68, -10.24, -0.8). Initialize blackboard with SetBlackboard and use NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"target\" value=\"-7.57;-1.87;-0.38\"/>\n      <NavToPose goal=\"{target}\" />\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Output a full XML behavior tree. Travel to area at coordinates (-5.14, -10.57, 2.52). If unreachable, travel to quality gate at (-14.91, 10.75, -2.23). Initialize blackboard with SetBlackboard and use NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"target\" value=\"-5.14;-10.57;2.52\" />\n      <NavToPose goal=\"{target}\" />\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Output a full XML behavior tree. Route to storage pantry at coordinates (-9.02, 11.54, 0.16). If unreachable, route to conference table at (3.92, 9.07, 1.85). Initialize blackboard with SetBlackboard and use NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"target\" value=\"-9.02;11.54;0.16\" />\n      <NavToPose goal=\"{target}\" />\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Create an XML behavior tree. Proceed to returns counter at (3.47, 13.17, -1.38) with a 20-second timeout. If it fails, proceed to radiology room at (5.71, -8.48, -0.35). Use <Timeout> and NavToPose with SetBlackboard.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n    <BehaviorTree ID=\"MainTree\">\n        <Sequence>\n            <Timeout msec=\"20000\">\n                <NavToPose goal=\"{counter}\"/>\n            </Timeout>\n            <Fallback>\n                <SetBlackboard output_key=\"counter\" value=\"3.47;13.17;-1.38\"/>\n                <NavToPose goal=\"{counter}\" />\n            </Fallback>\n        </Sequence>\n    </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Output an executable behavior tree. Advance to press machine at (-13.49, -7.52, 2.19). Then advance to goal at (-1.31, 9.04, 1.05). Use <Sequence> with SetBlackboard and NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"press_machine\" value=\"-13.49;-7.52;0.0\"/>\n      <NavToPose goal=\"{press_machine}\" />\n      <SetBlackboard output_key=\"goal\" value=\"-1.31;9.04;0.0\"/>\n      <NavToPose goal=\"{goal}\" />\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Output a full XML behavior tree. Advance to guard post at coordinates (-2.98, 0.2, 2.64). If unreachable, advance to trash compactor at (5.75, 1.31, 1.83). Initialize blackboard with SetBlackboard and use NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"guard_post\" value=\"-2.98;0.2;2.64\"/>\n      <NavToPose goal=\"{guard_post}\" />\n      \n      <Fallback>\n        <SetBlackboard output_key=\"trash_compactor\" value=\"5.75;1.31;1.83\"/>\n        <NavToPose goal=\"{trash_compactor}\" />\n      </Fallback>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Create an XML behavior tree for a warehouse robot. Drive to the loading dock at (3.5, -1.2, 0.0). After arriving, head to the sorting station at (3.5, 2.4, 3.14). Use NavToPose with proper blackboard initialization.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"loading_dock\" value=\"3.5;-1.2;0.0\"/>\n      <NavToPose goal=\"{loading_dock}\" />\n      <SetBlackboard output_key=\"sorting_station\" value=\"3.5;2.4;3.14\"/>\n      <NavToPose goal=\"{sorting_station}\" />\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Output an executable behavior tree. Trek to garden patch at (5.14, 8.57, -1.14). Then trek to cleanroom bench at (-2.51, -10.52, -0.78). Use <Sequence> with SetBlackboard and NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"garden_patch\" value=\"5.14;8.57;-1.14\"/>\n      <NavToPose goal=\"{garden_patch}\" />\n      <SetBlackboard output_key=\"cleanroom_bench\" value=\"-2.51;-10.52;-0.78\"/>\n      <NavToPose goal=\"{cleanroom_bench}\" />\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Output a full XML behavior tree. Pilot to the supply_closet_4 (5.22; -6.84; 1.02) with a 15-second timeout. If it fails, displace to the parts_counter_5 at (-0.43, -1.74, -1.42). Use <Timeout> and NavToPose with SetBlackboard.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"supply_closet_4\" value=\"5.22;-6.84;1.02\"/>\n      <NavToPose goal=\"{supply_closet_4}\" />\n      <Timeout timeout=\"15s\" on_failure=\"Fallback\">\n        <Fallback>\n          <SetBlackboard output_key=\"parts_counter_5\" value=\"-0.43;-1.74;-1.42\"/>\n          <NavToPose goal=\"{parts_counter_5}\" />\n        </Fallback>\n      </Timeout>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Output a full XML behavior tree. Advance to packing station at coordinates (-13.09, 14.82, 2.73). If unreachable, advance to cleanroom bench at (-12.93, 13.01, -2.94). Initialize blackboard with SetBlackboard and use NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"packing_station\" value=\"-13.09;-14.82;2.73\"/>\n      <NavToPose goal=\"{packing_station}\" />\n      <Fallback>\n        <Sequence>\n          <SetBlackboard output_key=\"cleanroom_bench\" value=\"-12.93;-13.01;-2.94\"/>\n          <NavToPose goal=\"{cleanroom_bench}\" />\n        </Sequence>\n      </Fallback>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Draft an XML behavior tree. Travel to the gauge_cluster_3 (13.23, -2.31, 2.61) with a 60-second timeout. If it fails, trek to the water_treatment_2 at (-13.46, -6.37, -1.18). Use <Timeout> and NavToPose with SetBlackboard.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"gauge_cluster_3\" value=\"13.23;-2.31;0.0\"/>\n      <NavToPose goal=\"{gauge_cluster_3}\" />\n      <Timeout msec=\"60000\"/>\n      <SetBlackboard output_key=\"water_treatment_2\" value=\"-13.46;-6.37;0.0\"/>\n      <NavToPose goal=\"{water_treatment_2}\" />\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Output a full XML behavior tree. Advance to culture incubator at coordinates (-11.97, -5.95, -2.28). If unreachable, advance to stock room at (-10.27, 13.46, 1.83). Initialize blackboard with SetBlackboard and use NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"culture_incubator\" value=\"-11.97;-5.95;-2.28\"/>\n      <NavToPose goal=\"{culture_incubator}\" />\n      \n      <Fallback>\n        <SetBlackboard output_key=\"stock_room\" value=\"-10.27;13.46;1.83\"/>\n        <NavToPose goal=\"{stock_room}\" />\n      </Fallback>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Output an executable behavior tree. Journey to culture incubator at (-4.76, 10.49, 2.02). Then journey to waypoint at (-11.83, 13.82, 0.85). Use <Sequence> with SetBlackboard and NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"culture_incorp\" value=\"-4.76;10.49;2.02\"/>\n      <NavToPose goal=\"{culture_incorp}\" />\n      <SetBlackboard output_key=\"waypoint\" value=\"-11.83;13.82;0.85\"/>\n      <NavToPose goal=\"{waypoint}\" />\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Generate an executable XML behavior tree. Cruise to the monitoring_station_3 (-8.52; 11.09; -1.08) with a 45-second timeout. If it fails, journey to the agv_dock_2 [x: -10.57, y: 12.02, yaw: -3.12]. Use <Timeout> and NavToPose with SetBlackboard.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"monitoring_station_3\" value=\"-8.52;11.09;-1.08\"/>\n      <NavToPose goal=\"{monitoring_station_3}\" />\n      <Timeout msec=\"45000\"/>\n      <SetBlackboard output_key=\"agv_dock_2\" value=\"-10.57;12.02;-3.12\"/>\n      <NavToPose goal=\"{agv_dock_2}\" />\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Create an XML behavior tree. Head to packaging unit at (-11.57, 13.43, -0.22) with a 15-second timeout. If it fails, head to delivery drop at (-7.31, -3.93, 0.67). Use <Timeout> and NavToPose with SetBlackboard.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"packaging_unit\" value=\"-11.57;-13.43;-0.22\"/>\n      <NavToPose goal=\"{packaging_unit}\" />\n      <Timeout timeout=\"15s\" on_failure=\"true\">\n        <SetBlackboard output_key=\"delivery_drop\" value=\"-7.31;-3.93;0.67\"/>\n        <NavToPose goal=\"{delivery_drop}\" />\n      </Timeout>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Output a full XML behavior tree. Advance to operation theater at coordinates (-11.21, 3.73, 0.54). If unreachable, advance to printer station at (6.36, -3.57, 0.61). Initialize blackboard with SetBlackboard and use NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"target\" value=\"-11.21;-3.73;0.54\" />\n      <NavToPose goal=\"{target}\" />\n    </Sequence>\n    <Fallback>\n      <Sequence>\n        <SetBlackboard output_key=\"printer_station\" value=\"6.36;-3.57;0.61\" />\n        <NavToPose goal=\"{printer_station}\" />\n      </Sequence>\n    </Fallback>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Output a full XML behavior tree. Move to conference table at coordinates (-5.25, 4.87, 0.16). If unreachable, move to paint booth at (-5.59, -9.8, 2.59). Initialize blackboard with SetBlackboard and use NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"conference_table\" value=\"-5.25;-4.87;0.16\"/>\n      <NavToPose goal=\"{conference_table}\" />\n      <Fallback>\n        <SetBlackboard output_key=\"paint_booth\" value=\"-5.59;-9.8;2.59\"/>\n        <NavToPose goal=\"{paint_booth}\" />\n      </Fallback>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Create a full XML behavior tree. Travel to 'waypoint_alpha' (coords: 2.5, 3.5, 0.0). If the controller fails to reach it, navigate to 'waypoint_beta' (2.8, 3.5, 0.0). Ensure the tree handles navigation status codes properly within 'NavToPose'.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"waypoint_alpha\" value=\"2.5;3.5;0.0\"/>\n      <NavToPose goal=\"{waypoint_alpha}\" />\n      <Fallback>\n        <SetBlackboard output_key=\"waypoint_beta\" value=\"2.8;3.5;0.0\"/>\n        <NavToPose goal=\"{waypoint_beta}\" />\n      </Fallback>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Output an executable behavior tree. Journey to display shelf at (-6.65, 6.11, 1.86). Then journey to quality gate at (2.32, 8.99, 0.23). Use <Sequence> with SetBlackboard and NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"shelf\" value=\"-6.65;-6.11;1.86\"/>\n      <NavToPose goal=\"{shelf}\" />\n      <SetBlackboard output_key=\"quality_gate\" value=\"2.32;8.99;0.23\"/>\n      <NavToPose goal=\"{quality_gate}\" />\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Create an XML behavior tree. Proceed to packaging unit at (-14.26, 7.1, -1.05) with a 10-second timeout. If it fails, proceed to water cooler at (12.92, 9.07, 2.29). Use <Timeout> and NavToPose with SetBlackboard.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"packaging_unit\" value=\"-14.26;7.1;-1.05\"/>\n      <NavToPose goal=\"{packaging_unit}\" />\n      <Timeout msec=\"10000\"/>\n      <SetBlackboard output_key=\"water_cooler\" value=\"12.92;9.07;2.29\"/>\n      <NavToPose goal=\"{water_cooler}\" />\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Output a full XML behavior tree. Drive to stock room at coordinates (-14.44, 12.63, 2.27). If unreachable, drive to packing station at (2.27, 2.2, 1.32). Initialize blackboard with SetBlackboard and use NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <SetBlackboard output_key=\"stock_room\" value=\"-14.44;-14.44;2.27\" />\n      <NavToPose goal=\"{stock_room}\" />\n    </Sequence>\n    <Fallback>\n      <SetBlackboard output_key=\"packing_station\" value=\"2.27;2.2;1.32\" />\n      <NavToPose goal=\"{packing_station}\" />\n    </Fallback>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Create an XML behavior tree. Go to 'transfer_point_7'. After reaching it, cruise to 'access_hatch_6'. If 'access_hatch_6' is blocked, venture to 'cargo_lift_10'. Nest <Sequence> inside <Fallback> with NavToPose nodes.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence id=\"main\">\n      <NavToPose goal=\"{transfer_point_7}\" />\n      <Sequence>\n        <Fallback>\n          <NavToPose goal=\"{access_hatch_6}\" />\n          <Sequence>\n            <NavToPose goal=\"{cargo_lift_10}\" />\n          </Sequence>\n        </Fallback>\n      </Sequence>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Draft an XML behavior tree. Steer to 'destination_1'. If navigation fails, steer to 'lab_bench_28' and force a failure return. Use <ForceFailure> with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <NavToPose goal=\"{destination_1}\" />\n      <ForceFailure>\n        <NavToPose goal=\"{lab_bench_28}\" />\n      </ForceFailure>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Draft a complete XML behavior tree. Journey to 'forklift_charge_5'. If unreachable, proceed to 'welding_booth_5'. Use <Fallback> with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <NavToPose goal=\"{forklift_charge_5}\" />\n      <Fallback>\n        <NavToPose goal=\"{welding_booth_5}\" />\n      </Fallback>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Generate a behavior tree in XML. Navigate to 'weighbridge_5'.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n    <BehaviorTree ID=\"MainTree\">\n        <Sequence>\n            <NavToPose goal=\"{weighbridge_5}\" />\n        </Sequence>\n    </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Output a full XML behavior tree. Advance to 'queue_position_1'. After that, move to 'queue_position_2'. If queue_position_2 fails, navigate to 'bypass_position'. Use a '<Sequence>' inside '<Fallback>' with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <NavToPose goal=\"{queue_position_1}\" />\n      <Fallback>\n        <Sequence>\n          <NavToPose goal=\"{queue_position_2}\" />\n          <NavToPose goal=\"{bypass_position}\" />\n        </Sequence>\n      </Fallback>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Draft a complete XML behavior tree. Proceed to 'cubicle_16'. If navigation exceeds 60 seconds, proceed to 'printer_station_46' instead. Apply a <Timeout> decorator around NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <NavToPose goal=\"{cubicle_16}\" />\n      <Timeout timeout=\"60s\" node=\"{NavToPose}\"/>\n      <Fallback>\n        <NavToPose goal=\"{printer_station_46}\" />\n      </Fallback>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Draft a full XML behavior tree. Displace to 'break_room_3' with a 25-second timeout. On timeout, transit to 'valve_pit_8'. Use <Timeout> decorator around NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <NavToPose goal=\"{break_room_3}\" />\n      <Timeout timeout=\"25\" repeatable=\"false\">\n        <NavToPose goal=\"{valve_pit_8}\" />\n      </Timeout>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Create an executable XML behavior tree. Pilot to 'actuator_bank_8' with a 25-second timeout. On timeout, transit to 'cargo_lift_11'. Use <Timeout> decorator around NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <NavToPose goal=\"{actuator_bank_8}\" />\n      <Timeout timeout=\"25\" repeatable=\"false\">\n        <Sequence>\n          <NavToPose goal=\"{cargo_lift_11}\" />\n        </Sequence>\n      </Timeout>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Output a complete XML behavior tree. Route to 'recycling_bin_4' with a 15-second timeout. On timeout, venture to 'ppe_station_4'. Use <Timeout> decorator around NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <Timeout timeout=\"15\" node=\"NavToPose\">\n        <NavToPose goal=\"{recycling_bin_4}\" />\n      </Timeout>\n      <NavToPose goal=\"{ppe_station_4}\" />\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Create a complete XML behavior tree. Transit to 'waste_sorting_5' with a 20-second timeout. On timeout, head to 'plating_bath_6'. Use <Timeout> decorator around NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <Timeout node=\"NavToPose\" timeout=\"20\"/>\n      <NavToPose goal=\"{waste_sorting_5}\" />\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Generate an XML behavior tree. Move to the test station (position: 1.0, -1.0, -0.52). If timeout exceeds 25 seconds, navigate to the diagnostic station (position: 1.5, -1.0, 0.0). Use '<Timeout>' decorator with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <NavToPose goal=\"{test_station}\" />\n      <Timeout node=\"NavToPose\" timeout_seconds=\"25\">\n        <NavToPose goal=\"{diagnostic_station}\" />\n      </Timeout>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Create a complete XML behavior tree. Go to 'conveyor_belt_16'. If that fails, try 'operation_theater_6'. If that also fails, go to 'bike_rack_5'. Use nested <Fallback> with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <NavToPose goal=\"{conveyor_belt_16}\" />\n      <Fallback>\n        <Sequence>\n          <NavToPose goal=\"{operation_theater_6}\" />\n          <Fallback>\n            <NavToPose goal=\"{bike_rack_5}\" />\n          </Fallback>\n        </Sequence>\n      </Fallback>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Generate an executable XML behavior tree. The robot must venture to 'crimping_tool_6'. If that goal is not reachable, route to 'safety_shower_4'. Assume poses are pre-stored on the blackboard. Use NavToPose action nodes.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <NavToPose goal=\"{crimping_tool_6}\" />\n      <Fallback>\n        <Sequence>\n          <NavToPose goal=\"{safety_shower_4}\" />\n        </Sequence>\n      </Fallback>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Generate a complete XML behavior tree. Venture to shipping bay [x: 2.76, y: 9.92, yaw: -1.61]. Then venture to checkout lane [x: 5.92, y: -5.95, yaw: 1.16]. If checkout lane fails, venture to assembly line [x: 9.17, y: 8.89, yaw: 0.41]. Use <Sequence> and <Fallback> with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence id=\"main\">\n      <NavToPose goal=\"{shipping_bay}\" />\n      <Sequence id=\"checkout_sequence\">\n        <NavToPose goal=\"{checkout_lane}\" />\n        <Fallback to=\"{assembly_line}\">\n          <NavToPose goal=\"{assembly_line}\" />\n        </Fallback>\n      </Sequence>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Draft a complete XML behavior tree. Head to 'turbine_1'. After that, go to 'turbine_2'. If turbine_2 fails, navigate to 'control_room'. Use '<Sequence>' inside '<Fallback>' with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <NavToPose goal=\"{turbine_1}\" />\n      <Sequence>\n        <NavToPose goal=\"{turbine_2}\" />\n        <Fallback>\n          <Sequence>\n            <NavToPose goal=\"{control_room}\" />\n          </Sequence>\n        </Fallback>\n      </Sequence>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Output an XML behavior tree. The robot must travel to 'cable_tray_5'. If that goal is not reachable, pilot to 'freight_elevator_9'. Assume poses are pre-stored on the blackboard. Use NavToPose action nodes.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <NavToPose goal=\"{cable_tray_5}\" />\n      <Fallback>\n        <Sequence>\n          <NavToPose goal=\"{freight_elevator_9}\" />\n        </Sequence>\n      </Fallback>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Generate a full XML behavior tree. Advance to 'reception_desk_32'. If it fails, retry up to 5 times. If all attempts fail, advance to 'checkpoint_30'. Use <RetryUntilSuccessful> and <Fallback> with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <RetryUntilSuccessful num_attempts=\"5\">\n        <NavToPose goal=\"{reception_desk_32}\" />\n      </RetryUntilSuccessful>\n      <Fallback>\n        <NavToPose goal=\"{checkpoint_30}\" />\n      </Fallback>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Generate a behavior tree in XML. Go to 'agv_dock_8'. Retry up to 3 times on failure. If all attempts fail, venture to 'sensor_array_6'. Use <RetryUntilSuccessful> and <Fallback> with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <RetryUntilSuccessful max_attempts=\"3\">\n        <NavToPose goal=\"{agv_dock_8}\" />\n      </RetryUntilSuccessful>\n      <Fallback>\n        <NavToPose goal=\"{sensor_array_6}\" />\n      </Fallback>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Generate a complete XML behavior tree. Travel to 'forklift_charge_8'. If navigation fails, drive to 'comm_tower_12' and force a failure return. Use <ForceFailure> with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <NavToPose goal=\"{forklift_charge_8}\" />\n      <ForceFailure>\n        <NavToPose goal=\"{comm_tower_12}\" />\n      </ForceFailure>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Create an XML behavior tree. Travel to 'fuel_station_5'. If unreachable, make your way to 'lathe_station_5'. Use <Fallback> with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <NavToPose goal=\"{fuel_station_5}\" />\n      <Fallback>\n        <Sequence>\n          <NavToPose goal=\"{lathe_station_5}\" />\n        </Sequence>\n      </Fallback>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Generate a full XML behavior tree. Journey to 'culture_incubator_44'. If it fails, retry up to 4 times. If all attempts fail, journey to 'gate_30'. Use <RetryUntilSuccessful> and <Fallback> with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <RetryUntilSuccessful max_attempts=\"4\">\n        <NavToPose goal=\"{culture_incubator_44}\" />\n      </RetryUntilSuccessful>\n      <Fallback>\n        <NavToPose goal=\"{gate_30}\" />\n      </Fallback>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Output a behavior tree in XML. Route to 'service_corridor_6' with a 45-second timeout. On timeout, venture to 'server_farm_5'. Use <Timeout> decorator around NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <Timeout timeout=\"45\" node=\"NavToPose\">\n        <NavToPose goal=\"{service_corridor_6}\" />\n      </Timeout>\n      <Fallback node=\"NavigateToServerFarm5\">\n        <NavToPose goal=\"{server_farm_5}\" />\n      </Fallback>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Create a complete XML behavior tree. The robot must transit to 'power_substation_12'. If unreachable, try 'fire_extinguisher_8'. If both fail, go to 'stairwell_landing_9'. Assume poses are pre-stored on the blackboard. Use NavToPose action nodes.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <NavToPose goal=\"{power_substation_12}\" />\n      <Fallback>\n        <Sequence>\n          <NavToPose goal=\"{fire_extinguisher_8}\" />\n          <Fallback>\n            <NavToPose goal=\"{stairwell_landing_9}\" />\n          </Fallback>\n        </Sequence>\n      </Fallback>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Draft an executable XML behavior tree. Pilot to 'comm_tower_7'.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <NavToPose goal=\"{comm_tower_7}\" />\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Draft a complete XML behavior tree. Motor to 'fire_extinguisher_5'. Retry up to 5 times on failure. Use <RetryUntilSuccessful> with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <RetryUntilSuccessful num_attempts=\"5\">\n        <NavToPose goal=\"{fire_extinguisher_5}\" />\n      </RetryUntilSuccessful>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Draft a complete XML behavior tree. The robot must journey to 'pallet_rack_1'. If that goal is not reachable, journey to 'destination_36'. Assume poses are pre-stored on the blackboard. Use NavToPose action nodes.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <NavToPose goal=\"{pallet_rack_1}\" />\n      <Fallback>\n        <Sequence>\n          <NavToPose goal=\"{destination_36}\" />\n        </Sequence>\n      </Fallback>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Create an executable XML behavior tree. Go to 'generator_shed_4'. If unreachable, roll to 'first_aid_5'. Use <Fallback> with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <NavToPose goal=\"{generator_shed_4}\" />\n      <Fallback>\n        <Sequence>\n          <NavToPose goal=\"{first_aid_5}\" />\n        </Sequence>\n      </Fallback>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Output a behavior tree in XML. Route to 'buffer_zone_4'. Retry up to 3 times on failure. Use <RetryUntilSuccessful> with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <RetryUntilSuccessful num_attempts=\"3\">\n        <NavToPose goal=\"{buffer_zone_4}\" />\n      </RetryUntilSuccessful>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Output a complete XML behavior tree. The robot must displace to 'server_farm_6'. If that goal is not reachable, move to 'mockup_area_9'. Assume poses are pre-stored on the blackboard. Use NavToPose action nodes.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <NavToPose goal=\"{server_farm_6}\" />\n      <Fallback>\n        <NavToPose goal=\"{mockup_area_9}\" />\n      </Fallback>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Output a complete XML behavior tree. Transit to 'forklift_charge_7'. Retry up to 2 times on failure. Use <RetryUntilSuccessful> with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <RetryUntilSuccessful num_attempts=\"2\">\n        <NavToPose goal=\"{forklift_charge_7}\" />\n      </RetryUntilSuccessful>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Output an XML behavior tree. Route to 'curing_oven_1'. If is blocked, navigate to 'clean_transition_3'. If both fails, journey to 'comm_tower_8'. Use a three-way <Fallback> with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <NavToPose goal=\"{curing_oven_1}\" />\n      <Fallback>\n        <Sequence>\n          <NavToPose goal=\"{clean_transition_3}\" />\n          <Fallback>\n            <NavToPose goal=\"{comm_tower_8}\" />\n          </Fallback>\n        </Sequence>\n      </Fallback>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Generate an executable XML behavior tree. Travel to 'robot_cell_9'. If navigation fails, venture to 'monitoring_station_8' and force a failure return. Use <ForceFailure> with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <NavToPose goal=\"{robot_cell_9}\" />\n      <ForceFailure>\n        <NavToPose goal=\"{monitoring_station_8}\" />\n      </ForceFailure>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Output a behavior tree in XML. Route to 'fume_hood_37'. Retry up to 3 times on failure. Use <RetryUntilSuccessful> with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <RetryUntilSuccessful num_attempts=\"3\">\n        <NavToPose goal=\"{fume_hood_37}\" />\n      </RetryUntilSuccessful>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Create a complete XML behavior tree. Pilot to 'reservoir_5'. After reaching it, head to 'evacuation_point_2'. If 'evacuation_point_2' is blocked, venture to 'conveyor_junction_5'. Nest <Sequence> inside <Fallback> with NavToPose nodes.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <NavToPose goal=\"{reservoir_5}\" />\n      <Fallback>\n        <Sequence>\n          <NavToPose goal=\"{evacuation_point_2}\" />\n          <NavToPose goal=\"{conveyor_junction_5}\" />\n        </Sequence>\n      </Fallback>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Create a complete XML behavior tree. Journey to 'maintenance_zone_5'. If that fails, try make your way to 'cart_corral_6'. If that also fails, motor to 'relay_cabinet_5'. Use nested <Fallback> with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <NavToPose goal=\"{maintenance_zone_5}\" />\n      <Fallback>\n        <Sequence>\n          <NavToPose goal=\"{cart_corral_6}\" />\n          <Fallback>\n            <NavToPose goal=\"{relay_cabinet_5}\" />\n          </Fallback>\n        </Sequence>\n      </Fallback>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Draft a complete XML behavior tree. Steer to 'lathe_station_3'.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <Fallback>\n        <NavToPose goal=\"{lathe_station_3}\" />\n      </Fallback>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Create a complete XML behavior tree. Travel to 'transfer_point_8' with a 45-second timeout. On timeout, make your way to 'fire_extinguisher_6'. Use <Timeout> decorator around NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <Timeout timeout=\"45\" repeatable=\"false\">\n        <NavToPose goal=\"{transfer_point_8}\" />\n      </Timeout>\n      <NavToPose goal=\"{fire_extinguisher_6}\" />\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Create an executable XML behavior tree. Route to 'inspection_table_38' first. Upon success, route to 'trash_compactor_33'. If the second leg fails, route to 'target_11'. Use <Sequence> inside <Fallback> with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <NavToPose goal=\"{inspection_table_38}\" />\n      <Fallback>\n        <Sequence>\n          <NavToPose goal=\"{trash_compactor_33}\" />\n          <NavToPose goal=\"{target_11}\" />\n        </Sequence>\n      </Fallback>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Create a full XML behavior tree. The robot must trek to 'patch_panel_5'. If unreachable, try 'power_substation_11'. If both fail, displace to 'drone_pad_5'. Assume poses are pre-stored on the blackboard. Use NavToPose action nodes.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <NavToPose goal=\"{patch_panel_5}\" />\n      <Fallback>\n        <Sequence>\n          <NavToPose goal=\"{power_substation_11}\" />\n          <Fallback>\n            <NavToPose goal=\"{drone_pad_5}\" />\n          </Fallback>\n        </Sequence>\n      </Fallback>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Output an XML behavior tree. Steer to 'soldering_bench_6'. After reaching it, advance to 'valve_pit_7'. If 'valve_pit_7' is blocked, venture to 'actuator_bank_6'. Nest <Sequence> inside <Fallback> with NavToPose nodes.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <NavToPose goal=\"{soldering_bench_6}\" />\n      <Fallback>\n        <Sequence>\n          <NavToPose goal=\"{valve_pit_7}\" />\n          <NavToPose goal=\"{actuator_bank_6}\" />\n        </Sequence>\n      </Fallback>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Draft a complete XML behavior tree. The robot must advance to 'shipping_bay_28'. If that goal is not reachable, advance to 'server_rack_39'. Assume poses are pre-stored on the blackboard. Use NavToPose action nodes.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <NavToPose goal=\"{shipping_bay_28}\" />\n      <Fallback>\n        <Sequence>\n          <NavToPose goal=\"{server_rack_39}\" />\n        </Sequence>\n      </Fallback>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Create an executable XML behavior tree. Steer to 'hotel_lobby_39' first. Upon success, steer to 'cleaning_closet_23'. If the second leg fails, steer to 'lab_bench_37'. Use <Sequence> inside <Fallback> with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <NavToPose goal=\"{hotel_lobby_39}\" />\n      <Fallback>\n        <Sequence>\n          <NavToPose goal=\"{cleaning_closet_23}\" />\n          <NavToPose goal=\"{lab_bench_37}\" />\n        </Sequence>\n      </Fallback>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Draft a complete XML behavior tree. Navigate to 'garden_section'. Then journey to 'greenhouse'. If greenhouse navigation fails, navigate to 'tool_shed'. Use nested fallback structure with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <NavToPose goal=\"{garden_section}\" />\n      <Sequence>\n        <NavToPose goal=\"{greenhouse}\" />\n        <Fallback>\n          <NavToPose goal=\"{tool_shed}\" />\n        </Fallback>\n      </Sequence>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Output a behavior tree in XML. Go to 'gate_19'. Retry up to 5 times on failure. Use <RetryUntilSuccessful> with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <RetryUntilSuccessful max_attempts=\"5\">\n        <NavToPose goal=\"{gate_19}\" />\n      </RetryUntilSuccessful>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Create an executable XML behavior tree. Journey to 'tote_return_5'. If navigation fails, make your way to 'calibration_lab_9' and force a failure return. Use <ForceFailure> with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <NavToPose goal=\"{tote_return_5}\" />\n      <ForceFailure>\n        <NavToPose goal=\"{calibration_lab_9}\" />\n      </ForceFailure>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Generate an executable XML behavior tree. Advance to 'agv_dock_5'. Retry up to 2 times on failure. Use <RetryUntilSuccessful> with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <RetryUntilSuccessful num_attempts=\"2\">\n        <NavToPose goal=\"{agv_dock_5}\" />\n      </RetryUntilSuccessful>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Output an XML behavior tree. Drive to 'grinder_bench_4'. If unreachable, journey to 'training_sim_5'. Use <Fallback> with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <NavToPose goal=\"{grinder_bench_4}\" />\n      <Fallback>\n        <Sequence>\n          <NavToPose goal=\"{training_sim_5}\" />\n        </Sequence>\n      </Fallback>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Generate a complete XML behavior tree. Move to 'hotel_lobby_47' using NavToPose. If navigation fails, move to 'laundry_room_38' instead. Wrap in <Fallback> structure.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <NavToPose goal=\"{hotel_lobby_47}\" />\n      <Fallback>\n        <NavToPose goal=\"{laundry_room_38}\" />\n      </Fallback>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Draft a complete XML behavior tree. Advance to 'warehouse_section_23'. If navigation exceeds 10 seconds, advance to 'packaging_unit_38' instead. Apply a <Timeout> decorator around NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <NavToPose goal=\"{warehouse_section_23}\" />\n      <Timeout timeout=\"10s\" node=\"{NavToPose}\"/>\n      <Fallback>\n        <Sequence>\n          <NavToPose goal=\"{packaging_unit_38}\" />\n        </Sequence>\n      </Fallback>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    },
+    {
+        "input": "Generate a full XML behavior tree. Head to 'cubicle_28'. If it fails, retry up to 4 times. If all attempts fail, head to 'waypoint_4'. Use <RetryUntilSuccessful> and <Fallback> with NavToPose.",
+        "output": "<root main_tree_to_execute=\"MainTree\">\n  <BehaviorTree ID=\"MainTree\">\n    <Sequence>\n      <RetryUntilSuccessful>\n        <NavToPose goal=\"{cubicle_28}\" />\n      </RetryUntilSuccessful>\n      <Fallback>\n        <NavToPose goal=\"{waypoint_4}\" />\n      </Fallback>\n    </Sequence>\n  </BehaviorTree>\n</root>"
+    }
+]

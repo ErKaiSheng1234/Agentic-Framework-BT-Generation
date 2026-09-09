@@ -1,0 +1,40 @@
+// Visual studio code setup in linux system
+{
+    "name": "langchain_v1.0",
+    "privileged": true,
+    "build": {
+        "dockerfile": "Dockerfile_langchain_v1",
+        "context": "..",
+        "args": {
+            "USER_UID": "1000",
+            "USER_GID": "1000"
+        }
+    },
+    "containerEnv": {
+        "DISPLAY": "${env:DISPLAY}",                    
+        // "XDG_RUNTIME_DIR": "/run/user/1000"
+    },
+    "runArgs": [
+        "--gpus",
+        "all",
+        "--runtime=nvidia",
+        "--net=host",       // To enable cross-machine communication
+        "--privileged",
+        "-v", "/tmp/.X11-unix:/tmp/.X11-unix",
+        "-e", "DISPLAY=${env:DISPLAY}"
+    ],
+    "workspaceFolder": "/workspaces",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces,type=bind",
+    "mounts": [
+        "type=bind,source=/usr/share/ollama/.ollama,target=/root/.ollama,consistency=cached",     // To store the ollama model locally -> Avoid redownloading after rebuilding the container
+    ],
+    "hostRequirements": {
+        "gpu": "optional"
+    },
+    "shutdownAction": "stopContainer",
+    "remoteUser": "devuser",
+    "onCreateCommand": "python3 -m pip install --upgrade pip setuptools wheel",     // Update setuptools lib to avoid build error.
+    "postCreateCommand": "cd /workspaces/ && pip install -e ."
+}
+
+// Visual studio code setup in windows system

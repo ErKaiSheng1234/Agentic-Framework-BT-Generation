@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentic_framework"
+version = "0.0.1"
+description = "An agentic framework for Behavior Tree generation with custom node."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+
+# This tells setuptools to automatically find your agentic_framework folder
+[tool.setuptools.packages.find]
+where = ["."]

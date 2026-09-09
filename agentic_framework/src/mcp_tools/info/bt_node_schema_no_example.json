@@ -1,0 +1,78 @@
+{
+  "AlwaysSuccess": {
+    "type": "Action",
+    "description": "Always returns SUCCESS immediately upon execution.",
+    "example": "<AlwaysSuccess />"
+  },
+  "Fallback": {
+    "type": "Control",
+    "description": "Returns SUCCESS if any child succeeds. Tries children one by one until one returns SUCCESS.",
+    "example": "<Fallback> <Action1 /> <Action2 /> </Fallback>"
+  },
+  "ForceFailure": {
+    "type": "Decorator",
+    "description": "Executes the child and returns FAILURE regardless of whether the child succeeded or failed.",
+    "example": "<ForceFailure> <ChildNode /> </ForceFailure>"
+  },
+  "NavToPose": {
+    "type": "Action",
+    "description": "Navigates the robot to a specific 2D pose (x, y, yaw). Use this node for point-to-point navigation.",
+    "parameters": {
+      "goal": "Input (Blackboard port). The value inside {} must be the Blackboard key, NOT the stored coordinate value."
+    }
+  },
+  "Parallel": {
+    "ports": {
+      "failure_count": "Input (int)",
+      "success_count": "Input (int)"
+    },
+    "type": "Control",
+    "description": "Runs children concurrently and succeeds/fails based on the threshold of children status.",
+    "example": "<Parallel success_count=\"2\" failure_count=\"1\"> <Child1 /> <Child2 /> </Parallel>"
+  },
+  "ParallelAll": {
+    "ports": {
+      "max_failures": "Input (int)"
+    },
+    "type": "Control",
+    "description": "Runs all children concurrently and succeeds only if all succeed, within failure limits.",
+    "example": "<ParallelAll max_failures=\"1\"> <Child1 /> <Child2 /> </ParallelAll>"
+  },
+  "RetryUntilSuccessful": {
+    "ports": {
+      "num_attempts": "Input (int)"
+    },
+    "type": "Decorator",
+    "description": "Retries the child if it fails, up to a specific number of attempts.",
+    "example": "<RetryUntilSuccessful num_attempts=\"3\"> <ChildNode /> </RetryUntilSuccessful>"
+  },
+  "Sequence": {
+    "type": "Control",
+    "description": "Executes children one by one, returning SUCCESS only if all children succeed.",
+    "example": "<Sequence> <Task1 /> <Task2 /> </Sequence>"
+  },
+  "SetBlackboard": {
+    "ports": {
+      "output_key": "Output (string)",
+      "value": "Input (BT::AnyTypeAllowed)"
+    },
+    "type": "Action",
+    "description": "Writes a value to a specific key in the Blackboard.",
+    "example": "<SetBlackboard output_key=\"target\" value=\"home\" />",
+    "remarks": {
+      "output_key_parameter": "The output_key parameter MUST be in string type.",
+      "invalid_usage": [
+        "<SetBlackboard output_key=\"{goal_12}\" value=\"1.5;2.0;0.0\" />",
+        "<SetBlackboard output_key=\"1.5;2.0;0.0\" value=\"1.5;2.0;0.0\" />"
+      ]
+    }
+  },
+  "Timeout": {
+    "ports": {
+      "msec": "Input (unsigned int)"
+    },
+    "type": "Decorator",
+    "description": "Aborts child execution and returns FAILURE if the child takes longer than the specified time.",
+    "example": "<Timeout msec=\"5000\"> <LongAction /> </Timeout>"
+  }
+}

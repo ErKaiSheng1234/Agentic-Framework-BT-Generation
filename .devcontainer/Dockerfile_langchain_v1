@@ -1,0 +1,67 @@
+FROM nvidia/cuda:12.8.1-cudnn-devel-ubuntu22.04
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    TZ=Etc/UTC \
+    ROS_DISTRO=humble
+
+# ---------------------------------------
+# 1. Install Python, ROS tools, dev tools
+# ---------------------------------------
+RUN apt-get update && apt-get install -y \
+    python3 python3-pip python3-argcomplete \
+    build-essential cmake git wget curl gnupg2 lsb-release nano
+
+RUN pip3 install -U \
+    colcon-common-extensions rosdep empy==3.3.4
+
+# ---------------------------------------
+# 3. Python Libraries
+# ---------------------------------------
+RUN apt-get update && apt-get install -y zstd
+RUN curl -fsSL https://ollama.com/install.sh | sh
+RUN pip3 install \
+    langchain-community langgraph==1.0.10 \
+    ollama pydantic pytz Pillow
+
+# For RAG capabilities
+RUN pip3 install --no-cache-dir \
+    "langchain>=1.0,<2.0" \
+    "langchain-ollama>=0.1,<=1.0.1" \
+    "langchain-chroma>=0.1,<=1.1" \
+    "chromadb>=0.5,<1.0"
+
+# Setup mcp
+# Upgrade existing Node.js to v22
+RUN apt-get update && apt-get install -y curl ca-certificates gnupg
+
+RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
+    && apt-get install -y nodejs \
+    && apt-get purge -y npm \
+    && npm install -g npm@latest \
+    && node -v \
+    && npm -v
+RUN pip3 install "mcp[cli]"
+RUN pip3 install langchain-mcp-adapters
+RUN pip3 install langchain-text-splitters
+
+RUN pip3 install transformers accelerate peft bitsandbytes datasets
+RUN pip3 install deepspeed
+
+RUN curl -LsSf https://astral.sh/uv/install.sh | \
+    env UV_INSTALL_DIR=/usr/local/bin sh
+
+
+# ---------------------------------------
+# 4. Create a non-root user
+# ---------------------------------------
+ARG USERNAME=devuser
+ARG USER_UID=1000
+ARG USER_GID=1000
+
+RUN groupadd --gid $USER_GID $USERNAME && \
+    useradd --uid $USER_UID --gid $USER_GID -m $USERNAME && \
+    chown -R $USERNAME:$USERNAME /home/$USERNAME
+
+USER root
+
+CMD ["/bin/bash"]
